@@ -187,14 +187,14 @@ header{
 }
 /* Estilos para el carusel bootstrap */
 .carousel_main{
-    width: 50%;
-    margin-bottom: 20px;
+    width: 70%;
+    margin-bottom: 30px;
+    background-color: #333;
+    box-shadow: 3px 7px 7px 3px #7d7979;
 }
-.carousel{
-     width: 100%;
-}
+
 /* Estilos para la img del carusel */
-.carousel-item img{
+.carousel-inner img{
     object-fit: contain;
 }
 .carousel-caption{
@@ -239,7 +239,7 @@ header{
     background-color: #a98c42d9;
 }
 /* Estilos para la Imagen "Ojo ojo" */
-.home_img_container{
+/* .home_img_container{
     order: 2;
     display: flex;
     justify-content: center;
@@ -247,16 +247,16 @@ header{
 .home_img{
    width: 55%;
    animation: rotation 15s infinite linear;
-}
+} */
 /*Efecto de rotacion para la imagen del inicio*/
-@keyframes rotation{
+/* @keyframes rotation{
     from{
         transform: rotate(0deg);
     }
     to{
         transform: rotate(359deg);
     }
-}
+} */
 /*----------------------------------------------------------------------------*/
 /* ---------------------- Estilos para acerca_de.html ----------------------- */
 /*----------------------------------------------------------------------------*/
@@ -297,12 +297,22 @@ header{
     text-align: center;
 }
 /* Estilos para seccion season bone */
+.season_bones{
+    display: flex;
+    flex-wrap: wrap;
+}
 .season_title{
     text-align: center;
     margin-top: 30px;
-} span{
-    font-size: 30px;
+}
+.season_title span{
+    font-size: 35px;
+    font-weight: 500;
+}
+.season_title p{
+    font-size: 20px;
     font-weight: 300;
+    margin: 10px 40px;
 }
 .season_container{
     width: 90%;
@@ -420,7 +430,7 @@ header{
     font-size: 30px;
 }
 /*------------------------------------------------------------------------------------*/
-/* ---------------------------- Estilos para el eventos.html ------------------------ */
+/* ---------------------------- Estilos para el cuadros.html ------------------------ */
 /*-----------------------------------------------------------------------------------*/
 /* Estilos para el Contenedor principal */
 .main_blog{
@@ -430,6 +440,23 @@ header{
     background-color: #fff;
 
     grid-area: content;
+}
+/* Estilos para la seccion del carousel de cuadros */
+.cuadros_container{
+    min-width: 75%;
+    margin: 30px auto;
+    background-color: #333;
+    box-shadow: 3px 5px 5px 3px rgb(115, 108, 108);
+}
+.carousel-inner img{
+    height: 500px;
+}
+/* Estilos la seccion de dibujo en vivo */
+.content_title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 40px;
 }
 .content_blog{
     display: flex;
@@ -445,12 +472,6 @@ header{
 .card img{
     width: 100%;    
 }
-.carousel_cuadros{
-    min-width: 320px;
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-
 /*------------------------------------------------------------------------------------*/
 /* ---------------------------- Estilos para el contacto.html ------------------------ */
 /*-------------------------------------------------------------------------------------*/
