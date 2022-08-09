@@ -614,9 +614,6 @@ header{
         font-size: 1rem;
         letter-spacing: none;
     }
-   
-    
-
 }
 /*Media queries para index.html*/
 @media (max-width:800px) {
@@ -628,7 +625,8 @@ header{
     .nav_main{
         display: none;
     }
-    .carousel_main{
+    .carousel_main,
+    .cuadros_container{
         width: 100%;
     }
     /*Estilos para galeria modo movile*/
@@ -640,10 +638,9 @@ header{
         margin-top: 330px;
     }
     /* Estilos para acerca_de.html */
-    .about_bio,
-    .season_container{
+    .about_bio{
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         justify-items: center;
     }
 }
