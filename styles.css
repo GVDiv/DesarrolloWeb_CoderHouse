@@ -225,6 +225,7 @@ header{
 /* Estilos para el nombre del dibujante */
 .name_home{
     font-size: 40px;
+    padding: 0 15px;
     letter-spacing: 2px;
     font-weight: 300;
     margin-top: 140px;
@@ -296,36 +297,27 @@ header{
     margin: 30px auto;
     text-align: center;
 }
-/* Estilos para seccion season bone */
-.season_bones{
+/* Estilos la seccion de dibujo en vivo */
+.content_title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 40px;
+}
+.content_blog{
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
-.season_title{
-    text-align: center;
-    margin-top: 30px;
+.card{
+    width: 320px;
+    margin-bottom: 15px;
 }
-.season_title span{
-    font-size: 35px;
-    font-weight: 500;
+.card img{
+    width: 100%;    
 }
-.season_title p{
-    font-size: 20px;
-    font-weight: 300;
-    margin: 10px 40px;
-}
-.season_container{
-    width: 90%;
-    height: 500px;
-    margin:20px auto;
-    background-color: #333;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-.season_container img{
-    height: 500px;
-}
-
 /*------------------------------------------------------------------------------------*/
 /* ---------------------------- Estilos para galeria.html ------------------------ */
 /*--------------------------------------------------------------------------------*/
@@ -443,34 +435,47 @@ header{
 }
 /* Estilos para la seccion del carousel de cuadros */
 .cuadros_container{
-    min-width: 75%;
-    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel_cuadros{
+    width: 70%;
+    margin-bottom: 30px;
     background-color: #333;
     box-shadow: 3px 5px 5px 3px rgb(115, 108, 108);
 }
 .carousel-inner img{
     height: 500px;
 }
-/* Estilos la seccion de dibujo en vivo */
-.content_title{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 40px;
-}
-.content_blog{
+/* Estilos para seccion season bone */
+.season_bones{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
 }
-.card{
-    width: 320px;
-    margin-bottom: 15px;
+.season_title{
+    text-align: center;
+    margin-top: 30px;
 }
-.card img{
-    width: 100%;    
+.season_title span{
+    font-size: 35px;
+    font-weight: 500;
+}
+.season_title p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 40px;
+}
+.season_container{
+    width: 90%;
+    height: 500px;
+    margin:20px auto;
+    background-color: #333;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.season_container img{
+    height: 500px;
 }
 /*------------------------------------------------------------------------------------*/
 /* ---------------------------- Estilos para el contacto.html ------------------------ */
@@ -626,7 +631,10 @@ header{
         display: none;
     }
     .carousel_main,
-    .cuadros_container{
+    .carousel_cuadros,
+    .cuadros_container,
+    .season_bones,
+    .season_container{
         width: 100%;
     }
     /*Estilos para galeria modo movile*/
