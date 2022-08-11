@@ -1,0 +1,241 @@
+/*----------------------------------------------------------------------------*/
+/* ------------------- Estilos para la navegacion Movile -------------------- */
+/*----------------------------------------------------------------------------*/
+@import "mixin";
+/*Estilos para el contenedor Principal*/
+.main_container{
+    min-height: 100vh;
+    background-color: #fff;
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: 
+    "nav"
+    "content"
+    "footer";
+
+        /* Estilos para lo barra de navegacion */
+        header{
+            background: url('https://drive.google.com/uc?export=download&id=1cyW6Rj0e0BimicBYntnA_K0uZ1xhesex');
+            height: 400px;
+            /*Estilos para navegacion responsive*/
+            nav{
+                --state-close: scale(0);
+                --state-menu: scale(1);
+                --state-bg: translate(-100%);
+            
+                padding: 40px 0;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: repeat(2, max-content);
+
+                /*Contenido de la navegacion movile*/
+                ul{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 0;
+                
+                    display: grid;
+                    align-content: center;
+                    gap: 2em;
+                    padding-left: 5%;
+                    min-width: 320px;
+                
+                    transform: var(--state-bg);
+                    transition: .3s transform;
+                    /*Imagen de la barra de navegacion responsive*/
+                    background-image: url('https://drive.google.com/uc?export=download&id=1tY-hPTntjfdcdF3GHJXV3EHCRZ1Ezz2L');
+                    background-size: cover;
+                    z-index: 1;
+
+                    li{
+                        list-style: none;
+
+                        a{
+                            color: #fff ;
+                            text-decoration: none;
+                            font-size: 1.6rem;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                            padding: 10px 15px;
+                            background-color: rgb(0, 0, 0);
+                            border-radius: 10px;
+                            border: 2px solid rgb(139, 94, 255);
+                            box-shadow: 2px 4px 4px 2px rgba(154, 53, 255, 0.37);
+                        }
+                    }
+
+                    
+                }
+            }
+            /*Botones para el menu movile*/
+            .nav_menu,
+            .nav_close{
+                cursor: pointer;
+                grid-column: -2/-1;
+                grid-row: 1/2;
+                z-index: 1;
+                transition: .5s;
+
+                img{
+                    width: 40px;
+                }   
+            }
+                /*Efectos para los botones menu y close*/
+                .nav_container:target{
+                            --state-bg: translate(0);
+                            --state-close:scale(1);
+                            --state-menu:scale(0);
+                    }
+                .nav_menu{
+                            transform: var(--state-menu);
+                            background: rgb(0, 47, 255);
+                            border-radius: 10px;
+                    }
+                .nav_close{
+                            transform: var(--state-close);
+                            background: rgba(230, 37, 37, 0.879);
+                            border-radius: 10px;
+                    }
+        }
+}
+/*----------------------------------------------------------------------------*/
+/* ------------------- Estilos para la navegacion Desktop -------------------- */
+/*----------------------------------------------------------------------------*/
+/* Estilos para Nav desktop */
+.nav_desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+
+    grid-area: content;
+    /* Estilos para el contenedor de la imagen de firma */
+    figure {
+        position: absolute;
+        top: 250px;
+        width: 150px;
+        /* Estilos para la imagen firma */
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    /* Estilos para el nombre del dibujante */
+    h1{
+        font-size: 40px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        margin-top: 140px;
+        text-align: center;
+    }
+    /* Estilos para linea de separacion */
+    .line{
+       @include line_deco();
+    }
+    /* Estilos para la nav del main */
+    .nav_main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Estilos para los botones */
+        .nav_buttons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .button{
+                text-decoration: none;
+                padding: 15px 35px;
+                font-size: 1.25rem;
+                position: relative;
+                margin: 32px;
+            }
+
+            .button-1{
+                color:  #a98c42;
+
+                &::after, &::before{
+                    border: 2px solid #000;
+                    content: "";
+                    position: absolute;
+                    width: calc(100% - 6px);
+                    height: calc(100% - 6px);
+                    left: 0;
+                    bottom: 0;
+                    transition: transform 0.3s ease;
+                }
+                &:hover{
+                    color:#000;
+                }
+                &:hover::after{
+                    transform: translate(-5px, -5px);
+                }
+                &:hover::before{
+                    transform: translate(5px, 5px);
+                }
+            }
+        }
+    }
+   
+}
+/* ------------------------------------------------------------------------------ */
+/* ------------------------Media para el modo responsive------------------------- */
+/* ------------------------------------------------------------------------------ */
+/*Estilos para la navegacion*/
+@media (min-width:768px) {
+
+    .nav_container{
+        --state-menu: scale(0);
+        --state-bg: translate(0);
+         /*Efectos para los botones menu y close*/
+        .nav_container:target{
+        --state-close:scale(0);
+
+             /*Efectos para la navegacion en modo Desktop*/
+             ul{
+                display: none;
+                background-color: unset;
+                background-image: unset;
+                position: unset;
+                padding: 0;
+                gap: 1.5em;
+                transform: unset;
+                grid-auto-flow: column;
+                grid-column: -2/-1;
+                grid-row: 1/2;
+    
+                li{
+                    a{
+                        font-size: 1rem;
+                        letter-spacing: none;
+                    }
+                }
+            }
+        }
+        .nav_menu,
+        .nav_close{
+            display: none;
+            transition: .5s ease-in;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .nav_buttons a{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+

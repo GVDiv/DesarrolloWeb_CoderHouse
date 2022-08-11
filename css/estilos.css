@@ -1,0 +1,591 @@
+/* estilo para la tipografia desde google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+/* Iconos Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  text-decoration: none; }
+
+/*----------------------------------------------------------------------------*/
+/* ------------------- Estilos para la navegacion Movile -------------------- */
+/*----------------------------------------------------------------------------*/
+/*Estilos para el contenedor Principal*/
+.main_container {
+  min-height: 100vh;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: "nav" "content" "footer";
+  /* Estilos para lo barra de navegacion */ }
+  .main_container header {
+    background: url("https://drive.google.com/uc?export=download&id=1cyW6Rj0e0BimicBYntnA_K0uZ1xhesex");
+    height: 400px;
+    /*Estilos para navegacion responsive*/
+    /*Botones para el menu movile*/
+    /*Efectos para los botones menu y close*/ }
+    .main_container header nav {
+      --state-close: scale(0);
+      --state-menu: scale(1);
+      --state-bg: translate(-100%);
+      padding: 40px 0;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(2, max-content);
+      /*Contenido de la navegacion movile*/ }
+      .main_container header nav ul {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        display: grid;
+        align-content: center;
+        gap: 2em;
+        padding-left: 5%;
+        min-width: 320px;
+        transform: var(--state-bg);
+        transition: .3s transform;
+        /*Imagen de la barra de navegacion responsive*/
+        background-image: url("https://drive.google.com/uc?export=download&id=1tY-hPTntjfdcdF3GHJXV3EHCRZ1Ezz2L");
+        background-size: cover;
+        z-index: 1; }
+        .main_container header nav ul li {
+          list-style: none; }
+          .main_container header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            background-color: black;
+            border-radius: 10px;
+            border: 2px solid #8b5eff;
+            box-shadow: 2px 4px 4px 2px rgba(154, 53, 255, 0.37); }
+    .main_container header .nav_menu,
+    .main_container header .nav_close {
+      cursor: pointer;
+      grid-column: -2/-1;
+      grid-row: 1/2;
+      z-index: 1;
+      transition: .5s; }
+      .main_container header .nav_menu img,
+      .main_container header .nav_close img {
+        width: 40px; }
+    .main_container header .nav_container:target {
+      --state-bg: translate(0);
+      --state-close:scale(1);
+      --state-menu:scale(0); }
+    .main_container header .nav_menu {
+      transform: var(--state-menu);
+      background: #002fff;
+      border-radius: 10px; }
+    .main_container header .nav_close {
+      transform: var(--state-close);
+      background: rgba(230, 37, 37, 0.879);
+      border-radius: 10px; }
+
+/*----------------------------------------------------------------------------*/
+/* ------------------- Estilos para la navegacion Desktop -------------------- */
+/*----------------------------------------------------------------------------*/
+/* Estilos para Nav desktop */
+.nav_desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  grid-area: content;
+  /* Estilos para el contenedor de la imagen de firma */
+  /* Estilos para el nombre del dibujante */
+  /* Estilos para linea de separacion */
+  /* Estilos para la nav del main */ }
+  .nav_desktop figure {
+    position: absolute;
+    top: 250px;
+    width: 150px;
+    /* Estilos para la imagen firma */ }
+    .nav_desktop figure img {
+      width: 100%;
+      border-radius: 10px; }
+  .nav_desktop h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-top: 140px;
+    text-align: center; }
+  .nav_desktop .line {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9; }
+  .nav_desktop .nav_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Estilos para los botones */ }
+    .nav_desktop .nav_main .nav_buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .nav_desktop .nav_main .nav_buttons .button {
+        text-decoration: none;
+        padding: 15px 35px;
+        font-size: 1.25rem;
+        position: relative;
+        margin: 32px; }
+      .nav_desktop .nav_main .nav_buttons .button-1 {
+        color: #a98c42; }
+        .nav_desktop .nav_main .nav_buttons .button-1::after, .nav_desktop .nav_main .nav_buttons .button-1::before {
+          border: 2px solid #000;
+          content: "";
+          position: absolute;
+          width: calc(100% - 6px);
+          height: calc(100% - 6px);
+          left: 0;
+          bottom: 0;
+          transition: transform 0.3s ease; }
+        .nav_desktop .nav_main .nav_buttons .button-1:hover {
+          color: #000; }
+        .nav_desktop .nav_main .nav_buttons .button-1:hover::after {
+          transform: translate(-5px, -5px); }
+        .nav_desktop .nav_main .nav_buttons .button-1:hover::before {
+          transform: translate(5px, 5px); }
+
+/* ------------------------------------------------------------------------------ */
+/* ------------------------Media para el modo responsive------------------------- */
+/* ------------------------------------------------------------------------------ */
+/*Estilos para la navegacion*/
+@media (min-width: 768px) {
+  .nav_container {
+    --state-menu: scale(0);
+    --state-bg: translate(0);
+    /*Efectos para los botones menu y close*/ }
+    .nav_container .nav_container:target {
+      --state-close:scale(0);
+      /*Efectos para la navegacion en modo Desktop*/ }
+      .nav_container .nav_container:target ul {
+        display: none;
+        background-color: unset;
+        background-image: unset;
+        position: unset;
+        padding: 0;
+        gap: 1.5em;
+        transform: unset;
+        grid-auto-flow: column;
+        grid-column: -2/-1;
+        grid-row: 1/2; }
+        .nav_container .nav_container:target ul li a {
+          font-size: 1rem;
+          letter-spacing: none; }
+    .nav_container .nav_menu,
+    .nav_container .nav_close {
+      display: none;
+      transition: .5s ease-in; } }
+
+@media (max-width: 768px) {
+  .nav_buttons a {
+    display: none; } }
+
+/*--------------------------------------------------------------------------------*/
+/* --------------------------- Estilos para el index.html ---------------------- */
+/*----------------------------------------------------------------------------*/
+.main_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  grid-area: content;
+  /* Estilos para linea de separacion */
+  /* Estilos para el carusel bootstrap */ }
+  .main_home .line {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9; }
+  .main_home .carousel_main {
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #333;
+    box-shadow: 3px 7px 7px 3px #7d7979; }
+    .main_home .carousel_main .carousel {
+      width: 90%;
+      height: 500px;
+      margin: auto; }
+      .main_home .carousel_main .carousel .carousel-inner img {
+        object-fit: cover;
+        height: 500px; }
+      .main_home .carousel_main .carousel .carousel-inner .carousel-caption {
+        background-color: #000;
+        opacity: .7;
+        border-radius: 10px; }
+        .main_home .carousel_main .carousel .carousel-inner .carousel-caption h5 {
+          color: #fff;
+          font-size: 25px;
+          font-weight: 500; }
+        .main_home .carousel_main .carousel .carousel-inner .carousel-caption p {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 300;
+          text-align: center; }
+        .main_home .carousel_main .carousel .carousel-inner .carousel-caption a {
+          color: #fff;
+          background-color: #0091ff;
+          padding: 5px 5px;
+          border-radius: 10px;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 300; }
+
+/* Estilos para la Imagen "Ojo ojo" */
+/* .home_img_container{
+    order: 2;
+    display: flex;
+    justify-content: center;
+}
+.home_img{
+   width: 55%;
+   animation: rotation 15s infinite linear;
+} */
+/*Efecto de rotacion para la imagen del inicio*/
+/* @keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+} */
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------- Estilos para el Footer ------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* Estilos para el contenedor del footer */
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  grid-area: footer;
+  /* Estilos para el copyright */
+  /* Estilos para la nav del footer */ }
+  .footer_container span {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 15px;
+    padding: 0px 50px;
+    text-align: center; }
+  .footer_container ul {
+    padding: 5px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    /* Estilos para redes sociales */ }
+    .footer_container ul li {
+      padding: 10px 20px; }
+      .footer_container ul li a {
+        bottom: 10px;
+        font-size: 40px; }
+        .footer_container ul li a i {
+          color: #fff; }
+        .footer_container ul li a .bi-facebook:hover {
+          color: #0f90f3;
+          transition: 0.5s ease-out; }
+        .footer_container ul li a .bi-instagram:hover {
+          color: #c71683;
+          transition: 0.5s ease-out; }
+        .footer_container ul li a .bi-pinterest:hover {
+          color: #de4040;
+          transition: 0.5s ease-out; }
+        .footer_container ul li a .bi-youtube:hover {
+          color: #c00000;
+          transition: 0.5s ease-out; }
+
+/*----------------------------------------------------------------------------*/
+/* ---------------------- Estilos para acerca_de.html ----------------------- */
+/*----------------------------------------------------------------------------*/
+/* Estilos para el Contenido principal */
+.main_about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  grid-area: content;
+  /* Estilos para la seccion de biografia */
+  /* Estilos para linea de separacion */
+  /* Estilos la seccion de dibujo en vivo */ }
+  .main_about .about_bio {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
+    /* Imagen de biografia */
+    /* Texto biografia */ }
+    .main_about .about_bio picture img {
+      width: auto;
+      height: 400px; }
+    .main_about .about_bio .about_bio_content {
+      width: 60%;
+      height: auto;
+      margin: 30px auto;
+      text-align: center; }
+      .main_about .about_bio .about_bio_content h2 {
+        padding: 10px 10px; }
+  .main_about .line {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9; }
+  .main_about .content_blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center; }
+    .main_about .content_blog .content_title {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px 40px; }
+    .main_about .content_blog .card {
+      width: 320px;
+      margin-bottom: 15px; }
+      .main_about .content_blog .card img {
+        width: 100%; }
+
+/* ------------------------------------------------------------------------------ */
+/* ------------------------Media para el modo responsive------------------------- */
+/* ------------------------------------------------------------------------------ */
+@media (max-width: 800px) {
+  /* Estilos para acerca_de.html */
+  .about_bio {
+    justify-content: center; } }
+
+/*------------------------------------------------------------------------------------*/
+/* ---------------------------- Estilos para galeria.html ------------------------ */
+/*--------------------------------------------------------------------------------*/
+/* Estilos para la Galeria */
+.main_galeria {
+  grid-area: content;
+  padding-top: 480px; }
+  .main_galeria .galeria {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: auto;
+    gap: 10px;
+    padding: 10px 0px;
+    background-color: #333;
+    grid-area: content; }
+    .main_galeria .galeria a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3); }
+      .main_galeria .galeria a img {
+        width: 100%;
+        vertical-align: top;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s; }
+      .main_galeria .galeria a:hover img {
+        filter: blur(2px);
+        transform: rotate(10deg) scale(1.3); }
+  .main_galeria .light_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0); }
+    .main_galeria .light_box .next {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      background: #333;
+      color: #9dff00;
+      display: block;
+      line-height: 30px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 20px; }
+    .main_galeria .light_box img {
+      min-width: 25vh;
+      max-height: 100vh; }
+    .main_galeria .light_box .close {
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+      background: rgba(230, 37, 37, 0.879);
+      color: white;
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      text-decoration: none;
+      text-align: center;
+      line-height: 45px;
+      border-radius: 10px; }
+  .main_galeria .light_box:target {
+    transform: scale(1); }
+
+/* ------------------------------------------------------------------------------ */
+/* ------------------------Media para el modo responsive------------------------- */
+/* ------------------------------------------------------------------------------ */
+/*Estilos para galeria modo movile*/
+@media screen and (max-width: 400px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .close {
+    top: 20px;
+    right: 20px; } }
+
+@media (max-width: 770px) {
+  /*Estilos para galeria modo movile*/
+  .light_box img {
+    width: 85vw;
+    max-height: 100vh; }
+  .main_galeria {
+    margin-top: -100px; } }
+
+/*------------------------------------------------------------------------------------*/
+/* ---------------------------- Estilos para el cuadros.html ------------------------ */
+/*-----------------------------------------------------------------------------------*/
+/* Estilos para el Contenedor principal */
+.main_blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  grid-area: content;
+  /* Estilos para la seccion del carousel de cuadros */
+  /* Estilos para seccion season bone */ }
+  .main_blog .cuadros_container {
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #333;
+    box-shadow: 3px 7px 7px 3px #7d7979; }
+    .main_blog .cuadros_container .carousel {
+      width: 90%;
+      height: 500px;
+      margin: auto; }
+      .main_blog .cuadros_container .carousel img {
+        object-fit: contain;
+        height: 500px; }
+  .main_blog .line {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9; }
+  .main_blog .season_bones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .main_blog .season_bones .season_title {
+      text-align: center;
+      margin-top: 30px; }
+      .main_blog .season_bones .season_title span {
+        font-size: 35px;
+        font-weight: 500; }
+      .main_blog .season_bones .season_title p {
+        font-size: 20px;
+        font-weight: 300;
+        margin: 10px 40px; }
+    .main_blog .season_bones .season_container {
+      width: 90%;
+      height: 500px;
+      align-items: center;
+      margin-bottom: 30px;
+      background-color: #333;
+      box-shadow: 3px 7px 7px 3px #7d7979; }
+      .main_blog .season_bones .season_container .carousel {
+        width: 90%;
+        height: 500px;
+        margin: auto; }
+        .main_blog .season_bones .season_container .carousel img {
+          object-fit: contain;
+          height: 500px; }
+
+/*------------------------------------------------------------------------------------*/
+/* ---------------------------- Estilos para el contacto.html ------------------------ */
+/*-------------------------------------------------------------------------------------*/
+/* Estilos para el Contenido principal */
+.main_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  grid-area: content;
+  /* Estilo para las redes sociales de contacto */
+  /* Estilos para el formulario */ }
+  .main_contact .contacto_redes {
+    width: 90%;
+    height: 200px;
+    text-align: center; }
+    .main_contact .contacto_redes h2 {
+      text-align: center;
+      margin-bottom: 40px; }
+    .main_contact .contacto_redes ul {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0;
+      margin: 0 auto; }
+      .main_contact .contacto_redes ul li {
+        color: #000; }
+        .main_contact .contacto_redes ul li a {
+          font-size: 70px;
+          padding: 7px; }
+          .main_contact .contacto_redes ul li a i {
+            color: #000; }
+          .main_contact .contacto_redes ul li a .bi-facebook:hover {
+            color: #0f90f3;
+            transition: 0.5s ease-out; }
+          .main_contact .contacto_redes ul li a .bi-instagram:hover {
+            color: #c71683;
+            transition: 0.5s ease-out; }
+          .main_contact .contacto_redes ul li a .bi-pinterest:hover {
+            color: #de4040;
+            transition: 0.5s ease-out; }
+          .main_contact .contacto_redes ul li a .bi-youtube:hover {
+            color: #c00000;
+            transition: 0.5s ease-out; }
+  .main_contact .line {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9; }
+  .main_contact .contacto_form {
+    width: 75%;
+    padding: 10px 10px; }
+    .main_contact .contacto_form h2 {
+      text-align: center; }

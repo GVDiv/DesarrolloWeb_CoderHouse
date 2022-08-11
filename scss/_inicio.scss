@@ -1,0 +1,82 @@
+
+/*--------------------------------------------------------------------------------*/
+/* --------------------------- Estilos para el index.html ---------------------- */
+/*----------------------------------------------------------------------------*/
+@import "mixin";
+.main_home{
+    @include main_content();
+     /* Estilos para linea de separacion */
+     .line{
+        @include line_deco();
+        }   
+    /* Estilos para el carusel bootstrap */
+    .carousel_main{
+        width: 90%;
+        height: 500px;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: #333;
+        box-shadow: 3px 7px 7px 3px #7d7979;
+
+        .carousel{
+            width: 90%;
+            height: 500px;
+            margin: auto;
+
+            .carousel-inner{
+                img{
+                    object-fit: cover;
+                    height: 500px;
+                }
+                .carousel-caption{
+                    background-color: #000;
+                    opacity: .7;
+                    border-radius: 10px;
+
+                    h5{
+                        color: #fff;
+                        font-size: 25px;
+                        font-weight: 500;
+                    }
+                    p{
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-align: center;
+                    }
+                    a{
+                        color: #fff;
+                        background-color: #0091ff;
+                        padding: 5px 5px;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/* Estilos para la Imagen "Ojo ojo" */
+/* .home_img_container{
+    order: 2;
+    display: flex;
+    justify-content: center;
+}
+.home_img{
+   width: 55%;
+   animation: rotation 15s infinite linear;
+} */
+/*Efecto de rotacion para la imagen del inicio*/
+/* @keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+} */

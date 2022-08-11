@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------- Estilos para el Footer ------------------------ */
+/* ------------------------------------------------------------------------------ */
+/* Estilos para el contenedor del footer */
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000 ;
+    grid-area: footer;
+/* Estilos para el copyright */
+    span{
+        color: #fff;
+        font-size: 10px;
+        font-weight: 300;
+        margin-top: 15px;
+        padding: 0px 50px;
+        text-align: center;
+    }
+    /* Estilos para la nav del footer */
+    ul{
+        padding: 5px 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+
+        /* Estilos para redes sociales */
+        li{
+            padding: 10px 20px;
+
+            a{
+                bottom: 10px;
+                font-size: 40px;
+                
+                i {
+                    color: #fff;
+                } .bi-facebook:hover{
+                    color:#0f90f3 ;
+                    transition: 0.5s ease-out;
+                } .bi-instagram:hover{
+                    color: #c71683;
+                    transition: 0.5s ease-out;
+                } .bi-pinterest:hover{
+                    color: #de4040;
+                    transition: 0.5s ease-out;
+                } .bi-youtube:hover{
+                    color: #c00000;
+                    transition: 0.5s ease-out;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
