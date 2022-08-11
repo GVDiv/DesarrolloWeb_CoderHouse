@@ -1,0 +1,79 @@
+// Mixin para los main de cada htmt
+@mixin main_content(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+
+    grid-area: content;
+}
+// Mixin de Botones Next
+// puede recibir parametros y tiene que ser en orden 
+@mixin btn_next($ancho, $alto, $size, $bg, $color) {
+    width: $ancho;
+    height: $ancho;
+    font-size: $size;
+    background: $bg;
+    color: $color;
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+}
+// Mixin de Botones Close
+@mixin btn_close() {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: rgba(230, 37, 37, 0.879);
+    color: white;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+}
+// Mixin para las lineas de separacion
+@mixin line_deco() {
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #a98c42d9;
+}
+// Mixin Carousel Container
+@mixin carousel_container {
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #333;
+    box-shadow: 3px 7px 7px 3px #7d7979;
+        .carousel{
+            width: 90%;
+            height: 500px;
+            margin: auto;
+
+            img{
+                object-fit: contain;
+                height: 500px;
+                }
+        }
+                
+}
+//Mixin CustomCard
+// puede recibir parametros y tiene que ser en orden 
+@mixin custom_card( $ancho, $alto, $margen){
+        width: $ancho;
+        height: $alto;
+        margin:$margen;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}

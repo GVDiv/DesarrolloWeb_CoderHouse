@@ -1,0 +1,69 @@
+/*------------------------------------------------------------------------------------*/
+/* ---------------------------- Estilos para el contacto.html ------------------------ */
+/*-------------------------------------------------------------------------------------*/
+/* Estilos para el Contenido principal */
+.main_contact{
+    @include main_content();
+
+    /* Estilo para las redes sociales de contacto */
+    .contacto_redes{
+        width: 90%;
+        height: 200px;
+        text-align: center;
+
+        h2{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0;
+            margin: 0 auto;
+
+            li{
+                color: #000;
+
+                a{
+                    font-size: 70px;
+                    padding: 7px;
+                    
+                    i{
+                        color: #000;
+                        }
+                        .bi-facebook:hover{
+                            color:#0f90f3;
+                            transition: 0.5s ease-out;
+                        };
+                        .bi-instagram:hover{
+                                color: #c71683;
+                                transition: 0.5s ease-out;
+                        };
+                        .bi-pinterest:hover{
+                            color: #de4040;
+                            transition: 0.5s ease-out;
+                         };
+                         .bi-youtube:hover{
+                            color: #c00000;
+                             transition: 0.5s ease-out;
+                        };
+                }
+            }
+        }
+    }
+
+    .line{
+        @include line_deco();
+    }
+
+    /* Estilos para el formulario */
+    .contacto_form{
+        width: 75%;
+        padding: 10px 10px;
+
+        h2{
+            text-align: center;
+        }
+    }
+}
