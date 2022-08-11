@@ -1,6 +1,7 @@
 /*----------------------------------------------------------------------------*/
 /* ------------------- Estilos para la navegacion Movile -------------------- */
 /*----------------------------------------------------------------------------*/
+@import "mixin";
 /*Estilos para el contenedor Principal*/
 .main_container{
     min-height: 100vh;
@@ -135,7 +136,7 @@
     }
     /* Estilos para linea de separacion */
     .line{
-        @include line_deco();
+       @include line_deco();
     }
     /* Estilos para la nav del main */
     .nav_main{
