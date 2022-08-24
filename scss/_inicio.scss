@@ -9,6 +9,18 @@
      .line{
         @include line_deco();
         }   
+    //  Estilos para el titulo del inicio   
+    .main_title{
+        text-align: center;
+        margin: 0px 10px;
+        
+        h2{
+            @include title();
+        }
+        p{
+           @include sub_title();
+        }
+    }
     /* Estilos para el carusel bootstrap */
     .carousel_main{
         width: 90%;
@@ -58,6 +70,26 @@
         }
         
     }
+    // Estilos para las imagenes de pinterest
+    .section_news{
+        text-align: center;
+        margin: 0px 10px;
+        
+        h2{
+            @include title();
+        }
+        p{
+            @include sub_title();
+        }
+
+            .news{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+            }
+    }
+   
 }
 
 

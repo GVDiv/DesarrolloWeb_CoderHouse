@@ -77,3 +77,16 @@
         position: relative;
         box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
+// Mixin para titulos y subtitulos
+@mixin title {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+@mixin sub_title {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: .8;
+        margin: 20px 0px;
+}
