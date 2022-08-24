@@ -212,6 +212,19 @@
     margin-top: 10px;
     margin-bottom: 30px;
     background-color: #a98c42d9; }
+  .main_home .main_title {
+    text-align: center;
+    margin: 0px 10px; }
+    .main_home .main_title h2 {
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 2px; }
+    .main_home .main_title p {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: .8;
+      margin: 20px 0px; }
   .main_home .carousel_main {
     width: 90%;
     height: 500px;
@@ -247,6 +260,24 @@
           text-decoration: none;
           font-size: 18px;
           font-weight: 300; }
+  .main_home .section_news {
+    text-align: center;
+    margin: 0px 10px; }
+    .main_home .section_news h2 {
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 2px; }
+    .main_home .section_news p {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: .8;
+      margin: 20px 0px; }
+    .main_home .section_news .news {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem; }
 
 /* Estilos para la Imagen "Ojo ojo" */
 /* .home_img_container{
@@ -346,29 +377,53 @@
       margin: 30px auto;
       text-align: center; }
       .main_about .about_bio .about_bio_content h2 {
-        padding: 10px 10px; }
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2px; }
+      .main_about .about_bio .about_bio_content p {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: .8;
+        margin: 20px 0px; }
   .main_about .line {
     width: 90%;
     height: 2px;
     margin-top: 10px;
     margin-bottom: 30px;
     background-color: #a98c42d9; }
+  .main_about .content_title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 40px; }
+    .main_about .content_title h2 {
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 2px; }
+    .main_about .content_title p {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: .8;
+      margin: 20px 0px; }
   .main_about .content_blog {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     align-items: center; }
-    .main_about .content_blog .content_title {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin: 20px 40px; }
     .main_about .content_blog .card {
       width: 320px;
       margin-bottom: 15px; }
       .main_about .content_blog .card img {
         width: 100%; }
+      .main_about .content_blog .card p {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: .8;
+        margin: 20px 0px; }
 
 /* ------------------------------------------------------------------------------ */
 /* ------------------------Media para el modo responsive------------------------- */
@@ -483,22 +538,48 @@
   justify-items: center;
   background-color: #fff;
   grid-area: content;
-  /* Estilos para la seccion del carousel de cuadros */
+  /* Estilos para la seccion de cuadros */
   /* Estilos para seccion season bone */ }
+  .main_blog .main_title {
+    text-align: center; }
+    .main_blog .main_title h3 {
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 2px; }
+    .main_blog .main_title p {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: .8;
+      margin: 20px 0px; }
   .main_blog .cuadros_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 90%;
-    height: 500px;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #333;
-    box-shadow: 3px 7px 7px 3px #7d7979; }
-    .main_blog .cuadros_container .carousel {
-      width: 90%;
-      height: 500px;
-      margin: auto; }
-      .main_blog .cuadros_container .carousel img {
-        object-fit: contain;
-        height: 500px; }
+    justify-content: center;
+    margin-bottom: 30px; }
+    .main_blog .cuadros_container .cuadros_content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+      justify-content: center;
+      border-radius: 30px;
+      background-color: #333;
+      box-shadow: 3px 7px 7px 3px #7d7979; }
+      .main_blog .cuadros_container .cuadros_content .main_title h3 {
+        color: #fff;
+        margin-top: 5px;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2px; }
+      .main_blog .cuadros_container .cuadros_content .main_title p {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: .8;
+        margin: 20px 0px; }
   .main_blog .line {
     width: 90%;
     height: 2px;

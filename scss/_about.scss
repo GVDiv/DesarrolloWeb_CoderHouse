@@ -24,7 +24,11 @@
             text-align: center;
 
             h2{
-                padding: 10px 10px;
+                @include title();
+            }
+
+            p{
+                @include sub_title();
             }
         }
     }
@@ -32,6 +36,20 @@
     .line{
         @include line_deco();
         } 
+    .content_title{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 40px;
+
+            h2{
+                @include title();
+            }
+
+            p{
+                @include sub_title();
+            }
+    }
      /* Estilos la seccion de dibujo en vivo */
      .content_blog{
         display: flex;
@@ -40,19 +58,16 @@
         justify-content: center;
         align-items: center;
 
-        .content_title{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin: 20px 40px;
-        }
-
         .card{
             width: 320px;
             margin-bottom: 15px;
 
             img{
                 width: 100%;    
+            }
+
+            p{
+                @include sub_title();
             }
         }
     }
