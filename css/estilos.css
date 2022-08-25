@@ -532,6 +532,8 @@
 /*-----------------------------------------------------------------------------------*/
 /* Estilos para el Contenedor principal */
 .main_blog {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -541,7 +543,8 @@
   /* Estilos para la seccion de cuadros */
   /* Estilos para seccion season bone */ }
   .main_blog .main_title {
-    text-align: center; }
+    text-align: center;
+    width: 90%; }
     .main_blog .main_title h3 {
       font-size: 30px;
       font-weight: 300;
@@ -558,7 +561,7 @@
     gap: 2rem;
     width: 90%;
     justify-content: center;
-    margin-bottom: 30px; }
+    margin: 20px auto; }
     .main_blog .cuadros_container .cuadros_content {
       display: flex;
       flex-wrap: wrap;
